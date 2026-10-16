@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Historia de México</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Historia de México</h1>
+        <p>Conoce los acontecimientos que formaron nuestro país</p>
+    </header>
+
+    <nav>
+        <a href="#independencia">Independencia</a>
+        <a href="#liberalismo">Liberalismo</a>
+        <a href="#invasiones">Invasiones</a>
+    </nav>
+
+    <h2> La historia de nuestro país </h2>
+
+     <style>
+        .imagen-centrada {
+            display: block;      
+            margin-left: auto;   
+            margin-right: auto;  
+            width: 50%;          
+        }
+     </style>
+
+     <img src="fondo.jpg" alt="Descripción de la imagen" class="imagen-centrada">
+        
+
+    <p>
+        México tiene una historia llena de cambios políticos,
+        económicos y sociales. Durante el siglo XIX ocurrieron
+        acontecimientos que transformaron la vida de sus habitantes
+        y la manera de organizar el gobierno. Entre los más importantes
+        se encuentran la Independencia, el desarrollo del liberalismo
+        y las intervenciones extranjeras.
+    </p>
+
+    <p>
+        Estos procesos estuvieron relacionados con la búsqueda de
+        libertad, la creación de nuevas leyes y la defensa del
+        territorio nacional. Conocerlos permite comprender cómo
+        se formó México y por qué algunos de sus problemas y
+        principios políticos siguen siendo importantes en la actualidad.
+    </p>
+
+    <style>
+        
+        .contenedor-carrusel {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        
+        .carrusel {
+            position: relative;
+            width: 90%;
+            max-width: 650px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            background-color: #f4f4f4;
+        }
+
+        
+        .carrusel-inner {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+            height: 100%;
+        }
+
+        
+        .carrusel-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            flex-shrink: 0;
+        }
+
+       
+        .btn-carrusel {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 14px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            user-select: none;
+        }
+
+        .btn-carrusel:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .prev {
+            left: 15px;
+        }
+
+        .next {
+            right: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Galería Histórica: Independencia de México</h2>
+
+    <div class="contenedor-carrusel">
+        <div class="carrusel">
+            <div class="carrusel-inner" id="carruselInner">
+                <!-- Imagen 1: Miguel Hidalgo y el estandarte -->
+                <img src="miguel.jpg" alt="Miguel Hidalgo - Grito de Dolores">
+                
+                <!-- Imagen 2: José María Morelos y Pavón -->
+                <img src="jose.jpg" alt="José María Morelos y Pavón">
+                
+                <!-- Imagen 3: Entrada del Ejército Trigarante -->
+                <img src="mili.jpg" alt="Entrada del Ejército Trigarante a la Ciudad de México">
+            </div>
+
+            <!-- Botones -->
+            <button class="btn-carrusel prev" onclick="moverSlide(-1)">&#10094;</button>
+            <button class="btn-carrusel next" onclick="moverSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Script de control del carrusel -->
+    <script>
+        let indiceActual = 0;
+
+        function moverSlide(direccion) {
+            const inner = document.getElementById('carruselInner');
+            const totalSlides = inner.children.length;
+            
+            indiceActual += direccion;
+
+            if (indiceActual >= totalSlides) {
+                indiceActual = 0; 
+            } else if (indiceActual < 0) {
+                indiceActual = totalSlides - 1; 
+            }
+
+            const desplazamiento = -indiceActual * 100;
+            inner.style.transform = translateX(${desplazamiento}%);
+        }
+
+        // Cambio automático cada 5 segundos (puedes quitarlo si prefieres que solo cambie con los botones)
+        setInterval(() => {
+            moverSlide(1);
+        }, 5000);
+    </script>
+
+    <section id="independencia">
+        <h2> Independencia de México </h2>
+ 
+           <img src="indep.jpg" class="rounded" alt="Cinque Terre">
+
+        <p>
+            La Independencia de México fue un proceso histórico
+            que comenzó el 16 de septiembre de 1810 y terminó en
+            1821. Durante esos años, diferentes grupos lucharon
+            para terminar con el dominio español y conseguir que
+            el territorio pudiera gobernarse de manera independiente.
+        </p>
+
+        <p>
+            En aquella época existían grandes diferencias entre
+            los grupos sociales. Los españoles peninsulares tenían
+            importantes privilegios, mientras que muchos criollos,
+            indígenas y mestizos enfrentaban limitaciones y
+            desigualdades. También había problemas económicos,
+            impuestos y descontento con las autoridades coloniales.
+        </p>
+
+        <p>
+            Las ideas de libertad e igualdad, junto con los cambios
+            políticos que sucedían en otros países, influyeron en
+            el inicio del movimiento. Miguel Hidalgo llamó al pueblo
+            a levantarse en armas en septiembre de 1810, acontecimiento
+            conocido como el Grito de Dolores.
+        </p>
+
+        <h3>Personajes importantes</h3>
+
+        <ul>
+            <li>Miguel Hidalgo y Costilla: inició la lucha insurgente.</li>
+            <li>Ignacio Allende: participó en la organización del movimiento.</li>
+            <li>José María Morelos: continuó la lucha y propuso ideas políticas.</li>
+            <li>Vicente Guerrero: mantuvo la resistencia insurgente.</li>
+            <li>Agustín de Iturbide: participó en la consumación de la Independencia.</li>
+        </ul>
+         
+         <img src="inde.jpg" class="rounded" alt="Cinque Terre">
+
+        <h3> Etapas de la Independencia </h3>
+
+        <ol>
+            <li>Inicio de la lucha en 1810.</li>
+            <li>Organización del movimiento insurgente.</li>
+            <li>Resistencia de los grupos que continuaron luchando.</li>
+            <li>Consumación de la Independencia en 1821.</li>
+        </ol>
+
+        <p>
+            El 27 de septiembre de 1821, el Ejército Trigarante
+            entró en la Ciudad de México. Este acontecimiento
+            representó la consumación de la Independencia. Sin
+            embargo, el nuevo país tuvo que enfrentar problemas
+            económicos, desacuerdos políticos y dificultades para
+            establecer un gobierno estable.
+        </p>
+
+        <p>
+            La Independencia fue importante porque terminó con
+            el gobierno colonial español y permitió el nacimiento
+            de México como país independiente. También abrió una
+            nueva etapa de cambios y debates sobre cómo debía
+            organizarse la nación.
+        </p>
+    </section>
+
+    <section id="liberalismo">
+        <h2> Liberalismo mexicano </h2>
+
+        <p>
+            El liberalismo fue una corriente de pensamiento que
+            defendía la libertad individual, la igualdad ante la
+            ley y la participación de los ciudadanos en las
+            decisiones políticas. En México adquirió importancia
+            después de la Independencia, especialmente durante
+            los conflictos políticos del siglo XIX.
+        </p>
+
+        <p>
+            Los liberales buscaban establecer un gobierno basado
+            en leyes y limitar los privilegios de ciertos grupos.
+            También defendían que el país tuviera una Constitución
+            que estableciera los derechos de las personas y la
+            forma en que debían funcionar las instituciones.
+        </p>
+
+        <p>
+            Estas ideas provocaron diferencias con los conservadores.
+            Mientras los liberales promovían cambios en la organización
+            política y social, muchos conservadores defendían mantener
+            varias instituciones y tradiciones existentes. Las
+            diferencias entre ambos grupos provocaron enfrentamientos
+            y periodos de inestabilidad.
+        </p>
+
+        <h3>Características del liberalismo</h3>
+
+        <ul>
+            <li>Libertad de las personas y respeto a sus derechos.</li>
+            <li>Igualdad jurídica, es decir, igualdad ante la ley.</li>
+            <li>Establecimiento de un gobierno constitucional.</li>
+            <li>Separación entre la Iglesia y el Estado.</li>
+            <li>Reducción de los privilegios de algunas corporaciones.</li>
+            <li>Participación de los ciudadanos en la vida política.</li>
+        </ul>
+
+        <h3>Personajes destacados</h3>
+
+        <ol>
+            <li>Benito Juárez: defendió las ideas liberales y las Leyes de Reforma.</li>
+            <li>Melchor Ocampo: participó en las reformas liberales.</li>
+            <li>Miguel Lerdo de Tejada: colaboró en medidas de reforma económica y social.</li>
+        </ol>
+
+       
+
+        <p>
+            Un acontecimiento importante fue la Constitución de
+            1857, que estableció derechos y principios liberales.
+            Después se impulsaron las Leyes de Reforma, que
+            transformaron las relaciones entre la Iglesia y el
+            Estado y modificaron el funcionamiento de algunas
+            instituciones.
+        </p>
+
+        <p>
+            Benito Juárez fue una figura destacada de este proceso.
+            Durante su gobierno defendió la República y las reformas
+            liberales. Estos cambios contribuyeron a establecer
+            principios jurídicos que influyeron en la organización
+            del México moderno.
+        </p>
+
+        <p>
+            El liberalismo mexicano fue importante porque ayudó
+            a definir la relación entre los ciudadanos, las leyes
+            y el gobierno. Sus ideas influyeron en la formación
+            de las instituciones políticas del país.
+        </p>
+    </section>
+
+    <section id="invasiones">
+        <h2> Invasiones extranjeras en México </h2>
+
+        <p>
+            Durante el siglo XIX, México enfrentó varias intervenciones
+            extranjeras. Después de conseguir su Independencia, el
+            país tenía dificultades económicas, problemas políticos
+            y un gobierno que todavía buscaba consolidarse. Estas
+            condiciones hicieron más difícil defender el territorio
+            y responder a las presiones de otros países.
+        </p>
+
+        <p>
+            Francia y Estados Unidos tuvieron conflictos con México
+            por diferentes motivos. Entre ellos se encontraban las
+            reclamaciones económicas, las deudas, los intereses
+            territoriales y la intención de aumentar su influencia
+            en la región.
+        </p>
+
+        <h3>Principales intervenciones</h3>
+
+        <ul>
+            <li>
+                Primera intervención francesa (1838-1839):
+                Francia exigió el pago de reclamaciones económicas
+                de ciudadanos franceses. Este conflicto recibió
+                el nombre de Guerra de los Pasteles.
+            </li>
+            <li>
+                Guerra entre México y Estados Unidos (1846-1848):
+                fue un conflicto relacionado con la expansión
+                territorial estadounidense. Terminó con el Tratado
+                de Guadalupe Hidalgo, mediante el cual México perdió
+                una gran parte de su territorio.
+            </li>
+            <li>
+                Segunda intervención francesa (desde 1862):
+                Francia invadió México y apoyó el establecimiento
+                del Segundo Imperio Mexicano, encabezado por
+                Maximiliano de Habsburgo.
+            </li>
+        </ul>
+
+
+        <h3> Consecuencias de las intervenciones </h3>
+
+        <ol>
+            <li>Pérdidas humanas y destrucción de propiedades.</li>
+            <li>Problemas económicos y aumento de las deudas.</li>
+            <li>Pérdida de una gran parte del territorio nacional tras la guerra con Estados Unidos.</li>
+            <li>Mayor división entre grupos políticos mexicanos.</li>
+            <li>Cambios en el gobierno y en la organización del país.</li>
+        </ol>
+
+        <p>
+            Uno de los acontecimientos más conocidos fue la Batalla
+            de Puebla, ocurrida el 5 de mayo de 1862, cuando el
+            ejército mexicano derrotó a las fuerzas francesas.
+            Aunque esta victoria fue importante, la intervención
+            continuó y los franceses llegaron a ocupar la capital.
+        </p>
+
+        <p>
+            Durante el Segundo Imperio, los republicanos encabezados
+            por Benito Juárez continuaron defendiendo la República.
+            Finalmente, el Imperio terminó en 1867 y se restableció
+            el gobierno republicano.
+        </p>
+
+        <p>
+            Estos conflictos demostraron la importancia de defender
+            la soberanía nacional. También mostraron cómo los
+            intereses extranjeros y los problemas internos pueden
+            afectar la economía, la política y la vida de una sociedad.
+        </p>
+    </section>
+
+    <style>
+        .contenedor-video {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    </style>
+
+     <h2 style="text-align: center;">La Independencia de México</h2>
+
+    <div class="contenedor-video">
+        <iframe width="560" height="315" 
+    src="https://www.youtube-nocookie.com/embed/1AV88Wa9ooM" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+</iframe>
+    </div>
+
+    <p>
+        <a href="https://www.inehrm.gob.mx/"
+           target="_blank" rel="noopener noreferrer">
+            Instituto Nacional de Estudios Históricos de las
+            Revoluciones de México
+        </a>
+    </p>
+
+    <h2> Conclusión </h2>
+
+    <p>
+        La Independencia, el liberalismo y las invasiones extranjeras
+        fueron procesos importantes para la formación de México.
+        La Independencia permitió terminar con el dominio español,
+        el liberalismo impulsó cambios en las leyes y en el gobierno,
+        y las intervenciones extranjeras mostraron los problemas
+        que enfrentaba el país para defender su territorio.
+    </p>
+
+    <p>
+        Estudiar estos acontecimientos nos ayuda a entender que
+        México se formó mediante diferentes luchas, decisiones
+        políticas y transformaciones sociales. También permite
+        reconocer la importancia de la libertad, las leyes,
+        la soberanía y la participación de los ciudadanos.
+    </p>
+
+    
+
+</body>
+</html>

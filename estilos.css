@@ -1,0 +1,58 @@
+body {
+    font-family: Arial;
+    background-color: beige;
+    color: #3b3025;
+}
+
+header {
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #654321;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: darkgreen;
+    background-color: #d5e8c0;
+    padding: 10px;
+}
+
+h3 {
+    color: #654321;
+}
+
+p {
+    font-size: 16px;
+}
+
+section {
+    background-color: #f8f5e9;
+    padding: 15px;
+}
+
+img {
+    width: 400px;
+}
+
+video {
+    width: 400px;
+}
+
+a {
+    color: darkgreen;
+}
+
